@@ -19,6 +19,6 @@ var app = express()
 app.use(passport.initialize());
 app.use( bodyParser.json() )
 app.use( seneca.export('web') )
-app.use( express.static('./client') )
+app.use( express.static('../client') )
 
 app.listen(3000)
