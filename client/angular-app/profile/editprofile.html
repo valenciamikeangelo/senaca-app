@@ -1,0 +1,53 @@
+<div class="signup center-block jumbotron">
+	<div class="alert alert-danger" role="alert" ng-show="profCtrl.error">
+		<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+		<span class="sr-only">Error:</span>
+		{{profCtrl.errorMsg}}
+	</div>
+
+
+<div class="signup center-block jumbotron">
+	<div class="alert alert-danger" role="alert"
+		ng-show="profCtrl.registerSuccess">
+		<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+		<span class="sr-only">Success: </span> 
+		{{profCtrl.message}} <a href="/login">Login now</a>
+	</div>	
+	
+	
+	<form role="form">
+		<h1>Update Profile</h1>
+		<div class="form-group">
+			<label for="username">Username</label> <input type="text"
+				class="form-control" id="username" ng-model="profCtrl.username"
+				placeholder="Username">
+		</div>
+		<div class="form-group">
+			<label for="password">Password</label> <input type="password"
+				class="form-control" id="password" ng-model="profCtrl.password"
+				placeholder="Password">
+		</div>
+		<div class="form-group">
+			<label for="email">Email</label> <input type="text"
+				class="form-control" id="email" ng-model="profCtrl.email "
+				placeholder="Email">
+		</div>
+		<div class="form-group">
+			<label for="firstname">Firstname</label> <input type="text"
+				class="form-control" id="firstname" ng-model="profCtrl.firstname"
+				placeholder="Firstname">
+		</div>
+		<div class="form-group">
+			<label for="lastname">Lastname</label> <input type="text"
+				class="form-control" id="lastname" ng-model="profCtrl.lastname"
+				placeholder="Lastname">
+		</div>
+		
+		<button type="submit" class="btn btn-default"
+			ng-click="profCtrl.updateProfile()">Submit</button>
+		<a href="/home">Cancel</a>
+		
+			
+
+	</form>
+</div>

@@ -1,0 +1,39 @@
+<div class="signup center-block jumbotron">
+	<div class="alert alert-danger" role="alert" ng-show="regCtrl.error">
+		<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+		<span class="sr-only">Error:</span>
+		{{regCtrl.errorMsg}}
+	</div>
+
+
+<div class="signup center-block jumbotron">
+	<div class="alert alert-danger" role="alert"
+		ng-show="regCtrl.registerSuccess">
+		<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+		<span class="sr-only">Success: </span> 
+		{{regCtrl.message}} <a href="/login">Login now</a>
+	</div>	
+	
+	
+	<form role="form">
+		<h1>Sign Up</h1>
+		<div class="form-group">
+			<label for="username">Username</label> <input type="text"
+				class="form-control" id="username" ng-model="regCtrl.username"
+				placeholder="Username">
+		</div>
+		<div class="form-group">
+			<label for="password">Password</label> <input type="password"
+				class="form-control" id="password" ng-model="regCtrl.password"
+				placeholder="Password">
+		</div>
+		<div class="form-group">
+			<label for="email">Email</label> <input type="text"
+				class="form-control" id="email" ng-model="regCtrl.email "
+				placeholder="Email">
+		</div>
+		<button type="submit" class="btn btn-default"
+			ng-click="regCtrl.register()">Submit</button>
+
+	</form>
+</div>

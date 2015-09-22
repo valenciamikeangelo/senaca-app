@@ -1,0 +1,27 @@
+<div class="signup center-block jumbotron">
+	<div class="alert alert-danger" role="alert" ng-show="loginCtrl.error">
+		<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+		<span class="sr-only">Error:</span>
+		{{loginCtrl.errorMsg}}
+	</div>
+
+
+	
+	<form role="form">
+		<h1>Login</h1>
+		<div class="form-group">
+			<label for="username">Username</label> <input type="text"
+				class="form-control" id="username" ng-model="loginCtrl.username"
+				placeholder="Username">
+		</div>
+		<div class="form-group">
+			<label for="password">Password</label> <input type="password"
+				class="form-control" id="password" ng-model="loginCtrl.password"
+				placeholder="Password">
+		</div>
+		
+		<button type="submit" class="btn btn-default"
+			ng-click="loginCtrl.login()">Login</button>
+
+	</form>
+</div>
