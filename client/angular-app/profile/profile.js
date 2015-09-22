@@ -56,7 +56,7 @@ angular.module('profile').factory('ProfileService',['$http',function($http){
 					email:self.email,
 					password:self.password,
 					firstname:self.firstname,
-					lastname:self.firstname
+					lastname:self.lastname
 			}
 			
 			ProfileService.update(profile).then(handleSuccess,handleError);
